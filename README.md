@@ -2,7 +2,7 @@
   #### Hello World! It's *Jacob Wilson*.
   ### ![Github license](https://img.shields.io/badge/license-MIT-yellowgreen.svg)
  
-  ## Table of Contents 📝
+  ## Table of Contents 
   * [Description](#description)
   * [Installation](#installation)
   * [Contributors](#contributors)
@@ -10,19 +10,19 @@
   * [license Info](#license)
   * [Questions](#Questions)
   
-  ## Description 🧑‍💻
+  ## Description 
   I created this application to assist business owners in finding high quality candidates. 
 
-  ## Installation 🏋️
+  ## Installation 
   The packages that must be installed for this application to workout: *React and ReactDOM *
 
-  ## Contributors 🤝
+  ## Contributors 
   N/A
 
-  ## Tests 🧪
+  ## Tests 
   N/A
  
-### Questions? 🤖
+### Questions? 
 #### GitHub:
   Github.com/jwilson1229
  #### Email:
