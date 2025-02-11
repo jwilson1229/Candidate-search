@@ -22,7 +22,11 @@ const SavedCandidates = () => {
           <thead>
             <tr className="bg-gray-100">
               <th className="border border-gray-300 px-4 py-2">Avatar</th>
+              <th className="border border-gray-300 px-4 py-2">Name</th>
               <th className="border border-gray-300 px-4 py-2">Username</th>
+              <th className="border border-gray-300 px-4 py-2">Location</th>
+              <th className="border border-gray-300 px-4 py-2">Email</th>
+              <th className="border border-gray-300 px-4 py-2">Company</th>
               <th className="border border-gray-300 px-4 py-2">Profile</th>
               <th className="border border-gray-300 px-4 py-2">Actions</th>
             </tr>
@@ -33,7 +37,11 @@ const SavedCandidates = () => {
                 <td className="border border-gray-300 px-4 py-2">
                   <img src={candidate.avatar_url} alt={candidate.login} className="w-12 h-12 rounded-full mx-auto" />
                 </td>
+                <td className="border border-gray-300 px-4 py-2">{candidate.name || 'N/A'}</td>
                 <td className="border border-gray-300 px-4 py-2">{candidate.login}</td>
+                <td className="border border-gray-300 px-4 py-2">{candidate.location || 'N/A'}</td>
+                <td className="border border-gray-300 px-4 py-2">{candidate.email || 'N/A'}</td>
+                <td className="border border-gray-300 px-4 py-2">{candidate.company || 'N/A'}</td>
                 <td className="border border-gray-300 px-4 py-2">
                   <a href={candidate.html_url} target="_blank" rel="noopener noreferrer" className="text-blue-500">
                     View Profile
