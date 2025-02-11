@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const SavedCandidates = () => {
   const [savedCandidates, setSavedCandidates] = useState<any[]>([]);
@@ -8,9 +8,15 @@ const SavedCandidates = () => {
     setSavedCandidates(storedCandidates);
   }, []);
 
+  const handleDeleteCandidate = (index: number) => {
+    const updatedCandidates = savedCandidates.filter((_, i) => i !== index);
+    setSavedCandidates(updatedCandidates);
+    localStorage.setItem("savedCandidates", JSON.stringify(updatedCandidates));
+  };
+
   return (
     <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Saved Candidates</h1>
+      <h1 className="text-2xl font-bold mb-4">Potential Candidates</h1>
       {savedCandidates.length > 0 ? (
         <table className="w-full border-collapse border border-gray-300">
           <thead>
@@ -18,6 +24,7 @@ const SavedCandidates = () => {
               <th className="border border-gray-300 px-4 py-2">Avatar</th>
               <th className="border border-gray-300 px-4 py-2">Username</th>
               <th className="border border-gray-300 px-4 py-2">Profile</th>
+              <th className="border border-gray-300 px-4 py-2">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -31,6 +38,14 @@ const SavedCandidates = () => {
                   <a href={candidate.html_url} target="_blank" rel="noopener noreferrer" className="text-blue-500">
                     View Profile
                   </a>
+                </td>
+                <td className="border border-gray-300 px-4 py-2">
+                  <button
+                    onClick={() => handleDeleteCandidate(index)}
+                    className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
+                  >
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}
