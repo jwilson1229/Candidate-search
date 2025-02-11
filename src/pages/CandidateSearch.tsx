@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { searchGithub, searchGithubUser } from "../api/API";
+import { useState, useEffect } from "react";
+import { searchGithub } from "../api/API";
 import { Candidate } from "../interfaces/Candidate.interface";
 
 const CandidateSearch = () => {
@@ -81,6 +81,7 @@ const CandidateSearch = () => {
 };
 
 export default CandidateSearch;
+
 
 
 
